@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ProfileFragment">
+
+    <ImageView
+        android:id="@+id/profile_pic"
+        android:adjustViewBounds="true"
+        android:layout_marginVertical="30dp"
+        android:src="@drawable/ic_account_circle_black_24dp"
+        android:layout_width="200dp"
+        android:tint="@color/design_fab_stroke_top_outer_color"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/username_title"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/sign_in_out_button"
+        style="@style/Base.Widget.AppCompat.ActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/sign_in" />
+
+</LinearLayout>
