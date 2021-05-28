@@ -206,7 +206,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void goToMainActivity(Credentials credentials) {
-        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        Intent i = new Intent(getApplicationContext(), SaveSharedPreference.isOnboardingDone(getApplicationContext()) ? MainActivity.class : OnboardingActivity.class);
         if (credentials != null) {
             SaveSharedPreference.setCredentials(getApplicationContext(), credentials);
         }

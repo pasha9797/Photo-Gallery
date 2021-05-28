@@ -18,6 +18,7 @@ public class SaveSharedPreference {
     static final String PREF_USERNAME = "username";
     static final String PREF_PASSWORD = "password";
     static final String MOCK_PHOTOS_METADARA = "mock_photos_metadata";
+    static final String ONBOARDING_DONE = "onboarding";
 
     static SharedPreferences getSharedPreferences(Context ctx) {
         return PreferenceManager.getDefaultSharedPreferences(ctx);
@@ -62,7 +63,19 @@ public class SaveSharedPreference {
         if (json == null) {
             return null;
         }
-        Type type = new TypeToken<ArrayList<PhotoMetadata>>(){}.getType();
+        Type type = new TypeToken<ArrayList<PhotoMetadata>>() {
+        }.getType();
         return gson.fromJson(json, type);
+    }
+
+    public static boolean isOnboardingDone(Context ctx) {
+        SharedPreferences pref = getSharedPreferences(ctx);
+        return pref.getBoolean(ONBOARDING_DONE, false);
+    }
+
+    public static void onboardingDone(Context ctx) {
+        SharedPreferences.Editor editor = getSharedPreferences(ctx).edit();
+        editor.putBoolean(ONBOARDING_DONE, true);
+        editor.apply();
     }
 }

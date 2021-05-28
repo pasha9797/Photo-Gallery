@@ -24,4 +24,12 @@
     <string name="sign_out">Sign out</string>
     <string name="sign_in">Sign in</string>
     <string name="anonymous_user">Anonymous user</string>
+    <string name="title_activity_onboarding">OnboardingActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="finish">Finish</string>
+
+    <string name="onboarding_desc_1">Scroll the feed to view photos.</string>
+    <string name="onboarding_desc_2">If you are signed it, you can press "Like" button on the photos you like</string>
+    <string name="onboarding_desc_3">Also feel free to press "Add" button if you want to upload your photo.</string>
+    <string name="onboarding_desc_4">You can go to profile to view your username and sign out. If you are in anonymous mode you can sign in from there.</string>
 </resources>
